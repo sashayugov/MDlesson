@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MoonFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/moon_image"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/moon_image_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/moon_image"
+            app:layout_constraintBottom_toBottomOf="@id/moon_image"
+            app:layout_constraintStart_toStartOf="@id/moon_image"
+            app:layout_constraintEnd_toEndOf="@id/moon_image"/>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Обратите внимание на атрибуты app:layout_scrollFlags у CollapsingToolbarLayout,
+app:layout_behavior у NestedScrollView. Они управляют поведением toolbar при
+скроллировании. И app:layout_anchor, который привязывает FAB к toolbar и двигается вместе с ним
+(и исчезает, как показано в примере). Не забывайте про атрибут layout_anchorGravity — именно
+он отвечает за диспозицию вашей FAB, а не простой gravity или layout_gravity.
+Начнём с AppBarLayout. «Под капотом» это, по сути, «LinearLayout на стероидах», чьи элементы
+идут друг под другом, а специальные атрибуты позволяют управлять его поведением
+(сворачивать/разворачивать) при скроллировании экрана:
+"
+            app:layout_constraintTop_toBottomOf="@+id/moon_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
