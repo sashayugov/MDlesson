@@ -7,6 +7,7 @@
     tools:context=".ui.daily_image.ImageFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/animation_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

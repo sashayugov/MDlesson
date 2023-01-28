@@ -3,6 +3,9 @@ package com.example.mdlesson.ui.daily_image
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.transition.Fade
+import android.transition.Slide
+import android.transition.TransitionManager
 import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.ImageView
@@ -16,6 +19,7 @@ import coil.api.load
 import com.example.mdlesson.R
 import com.example.mdlesson.databinding.FragmentImageBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetBehavior.*
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
@@ -26,6 +30,7 @@ class ImageFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel by viewModels<DailyImageViewModel>()
+    private var textVisible = false
 
     private lateinit var dailyImageView: ImageView
     private lateinit var progressBar: ProgressBar
@@ -111,12 +116,29 @@ class ImageFragment : Fragment() {
 
     private fun setBottomSheetBehavior(bottomSheet: ConstraintLayout) {
         bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet)
-        bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
+        bottomSheetBehavior.state = STATE_HIDDEN
+
+        bottomSheetBehavior.addBottomSheetCallback(object : BottomSheetCallback() {
+            override fun onStateChanged(bottomSheet: View, newState: Int) {
+                when (newState) {
+                    STATE_HIDDEN -> setAnimationImageTapHint()
+                }
+
+            }
+
+            override fun onSlide(bottomSheet: View, slideOffset: Float) {}
+        })
+
     }
 
     private fun onImageClick() {
         dailyImageView.setOnClickListener {
-            bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
+            if (bottomSheetBehavior.state == STATE_COLLAPSED) {
+                bottomSheetBehavior.state = STATE_HIDDEN
+            } else {
+                bottomSheetBehavior.state = STATE_COLLAPSED
+                setAnimationImageTapHint()
+            }
         }
     }
 
@@ -128,6 +150,12 @@ class ImageFragment : Fragment() {
             intent.data = uri
             startActivity(intent)
         }
+    }
+
+    private fun setAnimationImageTapHint() {
+        TransitionManager.beginDelayedTransition(binding.animationContainer)
+        textVisible = !textVisible
+        binding.imageTapHint.visibility = if (textVisible) View.GONE else View.VISIBLE
     }
 
     override fun onDestroyView() {
