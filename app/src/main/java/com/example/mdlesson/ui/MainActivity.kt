@@ -3,6 +3,7 @@ package com.example.mdlesson.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
 import com.example.mdlesson.R
 import com.example.mdlesson.databinding.ActivityMainBinding
 import com.example.mdlesson.ui.daily_image.ImageFragment
@@ -51,8 +52,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun <T : Fragment> doReplaceFragment(fragment: T) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.container, fragment)
-            .commit()
+        supportFragmentManager.commit {
+            setCustomAnimations(
+                R.anim.slide_in,
+                R.anim.fade_out,
+            )
+            replace(R.id.container, fragment)
+        }
     }
 }

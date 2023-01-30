@@ -1,5 +1,6 @@
 package com.example.mdlesson.ui
 
+import ZoomOutPageTransformer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -35,7 +36,10 @@ class PlanetsFragment : Fragment() {
         tabLayout = requireActivity().findViewById(R.id.tab_layout)
         viewPager = requireActivity().findViewById(R.id.pager)
 
-        viewPager.adapter = ViewPagerAdapter(requireActivity())
+        viewPager.apply {
+            adapter = ViewPagerAdapter(requireActivity())
+            setPageTransformer(ZoomOutPageTransformer())
+        }
         setTabs()
     }
 

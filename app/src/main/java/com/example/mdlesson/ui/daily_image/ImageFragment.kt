@@ -115,7 +115,7 @@ class ImageFragment : Fragment() {
     }
 
     private fun setBottomSheetBehavior(bottomSheet: ConstraintLayout) {
-        bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet)
+        bottomSheetBehavior = from(bottomSheet)
         bottomSheetBehavior.state = STATE_HIDDEN
 
         bottomSheetBehavior.addBottomSheetCallback(object : BottomSheetCallback() {
