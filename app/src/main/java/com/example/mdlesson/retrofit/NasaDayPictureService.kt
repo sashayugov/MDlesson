@@ -1,5 +1,9 @@
 package com.example.mdlesson.retrofit
 
+import com.example.mdlesson.retrofit.model.NasaResponseEarthModel
+import com.example.mdlesson.retrofit.model.NasaResponseMarsModel
+import com.example.mdlesson.retrofit.model.NasaResponseModel
+import com.example.mdlesson.retrofit.model.NasaResponseMoonModel
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

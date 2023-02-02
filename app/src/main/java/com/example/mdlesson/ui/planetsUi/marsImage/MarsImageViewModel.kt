@@ -1,11 +1,11 @@
-package com.example.mdlesson.ui.mars_image
+package com.example.mdlesson.ui.planetsUi.marsImage
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.mdlesson.BuildConfig
 import com.example.mdlesson.retrofit.NasaDayPictureRetrofit
-import com.example.mdlesson.retrofit.NasaResponseMarsModel
+import com.example.mdlesson.retrofit.model.NasaResponseMarsModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

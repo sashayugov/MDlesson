@@ -1,6 +1,6 @@
-package com.example.mdlesson.ui.mars_image
+package com.example.mdlesson.ui.planetsUi.marsImage
 
-import com.example.mdlesson.retrofit.NasaResponseMarsModel
+import com.example.mdlesson.retrofit.model.NasaResponseMarsModel
 
 sealed class MarsImage {
 

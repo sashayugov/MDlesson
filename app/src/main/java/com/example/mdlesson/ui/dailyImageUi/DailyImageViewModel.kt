@@ -1,11 +1,11 @@
-package com.example.mdlesson.ui.daily_image
+package com.example.mdlesson.ui.dailyImageUi
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.mdlesson.BuildConfig
 import com.example.mdlesson.retrofit.NasaDayPictureRetrofit
-import com.example.mdlesson.retrofit.NasaResponseModel
+import com.example.mdlesson.retrofit.model.NasaResponseModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

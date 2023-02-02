@@ -1,3 +1,5 @@
+package com.example.mdlesson.ui.planetsUi.viewPager
+
 import android.view.View
 import androidx.viewpager2.widget.ViewPager2
 
@@ -26,7 +28,7 @@ class ZoomOutPageTransformer : ViewPager2.PageTransformer {
                         horzMargin + vertMargin / 2
                     }
 
-                    // Scale the page down (between MIN_SCALE and 1)
+                    // Scale the page down (between com.example.mdlesson.ui.planetsUi.viewPager.MIN_SCALE and 1)
                     scaleX = scaleFactor
                     scaleY = scaleFactor
 

@@ -1,10 +1,8 @@
-package com.example.mdlesson.ui.daily_image
+package com.example.mdlesson.ui.dailyImageUi
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.transition.Fade
-import android.transition.Slide
 import android.transition.TransitionManager
 import android.view.*
 import androidx.fragment.app.Fragment

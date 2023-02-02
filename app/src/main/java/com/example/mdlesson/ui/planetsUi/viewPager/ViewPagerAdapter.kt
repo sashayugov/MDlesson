@@ -1,11 +1,11 @@
-package com.example.mdlesson.ui
+package com.example.mdlesson.ui.planetsUi.viewPager
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.mdlesson.ui.earth_image.EarthFragment
-import com.example.mdlesson.ui.mars_image.MarsFragment
-import com.example.mdlesson.ui.moon_image.MoonFragment
+import com.example.mdlesson.ui.planetsUi.earthImage.EarthFragment
+import com.example.mdlesson.ui.planetsUi.marsImage.MarsFragment
+import com.example.mdlesson.ui.planetsUi.moonImage.MoonFragment
 
 class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
     FragmentStateAdapter(fragmentActivity) {

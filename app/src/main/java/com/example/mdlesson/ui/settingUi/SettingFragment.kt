@@ -1,4 +1,4 @@
-package com.example.mdlesson.ui
+package com.example.mdlesson.ui.settingUi
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

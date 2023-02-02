@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import com.example.mdlesson.R
 import com.example.mdlesson.databinding.ActivityMainBinding
-import com.example.mdlesson.ui.daily_image.ImageFragment
+import com.example.mdlesson.ui.dailyImageUi.ImageFragment
+import com.example.mdlesson.ui.planetsUi.PlanetsFragment
+import com.example.mdlesson.ui.settingUi.SettingFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {

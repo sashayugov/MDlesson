@@ -1,6 +1,6 @@
-package com.example.mdlesson.ui.moon_image
+package com.example.mdlesson.ui.planetsUi.moonImage
 
-import com.example.mdlesson.retrofit.NasaResponseMoonModel
+import com.example.mdlesson.retrofit.model.NasaResponseMoonModel
 
 sealed class MoonImage {
 

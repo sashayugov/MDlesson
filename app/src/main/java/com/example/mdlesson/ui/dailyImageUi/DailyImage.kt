@@ -1,6 +1,6 @@
-package com.example.mdlesson.ui.daily_image
+package com.example.mdlesson.ui.dailyImageUi
 
-import com.example.mdlesson.retrofit.NasaResponseModel
+import com.example.mdlesson.retrofit.model.NasaResponseModel
 
 sealed class DailyImage {
 

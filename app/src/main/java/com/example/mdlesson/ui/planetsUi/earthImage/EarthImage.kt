@@ -1,6 +1,6 @@
-package com.example.mdlesson.ui.earth_image
+package com.example.mdlesson.ui.planetsUi.earthImage
 
-import com.example.mdlesson.retrofit.NasaResponseEarthModel
+import com.example.mdlesson.retrofit.model.NasaResponseEarthModel
 
 sealed class EarthImage {
 

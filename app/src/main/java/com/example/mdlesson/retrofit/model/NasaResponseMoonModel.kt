@@ -1,8 +1,8 @@
-package com.example.mdlesson.retrofit
+package com.example.mdlesson.retrofit.model
 
 import com.google.gson.annotations.SerializedName
 
-data class NasaResponseModel(
+data class NasaResponseMoonModel(
     @SerializedName("copyright")
     val copyright: String?,
     @SerializedName("date")
@@ -20,4 +20,3 @@ data class NasaResponseModel(
     @SerializedName("url")
     val url: String?
 )
-

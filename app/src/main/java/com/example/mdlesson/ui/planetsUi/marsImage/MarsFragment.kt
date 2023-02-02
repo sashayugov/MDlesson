@@ -1,4 +1,4 @@
-package com.example.mdlesson.ui.mars_image
+package com.example.mdlesson.ui.planetsUi.marsImage
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,7 +12,6 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import coil.api.load
 import com.example.mdlesson.databinding.FragmentMarsBinding
-import com.squareup.picasso.Picasso
 
 
 class MarsFragment : Fragment() {

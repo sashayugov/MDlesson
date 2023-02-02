@@ -1,11 +1,11 @@
-package com.example.mdlesson.ui.earth_image
+package com.example.mdlesson.ui.planetsUi.earthImage
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.mdlesson.BuildConfig
 import com.example.mdlesson.retrofit.NasaDayPictureRetrofit
-import com.example.mdlesson.retrofit.NasaResponseEarthModel
+import com.example.mdlesson.retrofit.model.NasaResponseEarthModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
