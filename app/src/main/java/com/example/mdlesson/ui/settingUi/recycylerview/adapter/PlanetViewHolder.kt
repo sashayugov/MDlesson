@@ -21,6 +21,6 @@ class PlanetViewHolder(
             placeholder(android.R.drawable.ic_menu_gallery)
         }
         planetNameTextView.text = planetUiModel.name
-        itemView.setOnClickListener { onPlanetClickListener }
+        itemView.setOnClickListener { onPlanetClickListener(planetUiModel) }
     }
 }
