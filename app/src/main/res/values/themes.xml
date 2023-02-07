@@ -14,9 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
     
-    <style name="StarrySkyTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="background">@color/purple_200</item>
-
-
+    <style name="SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/background</item>
     </style>
 </resources>
